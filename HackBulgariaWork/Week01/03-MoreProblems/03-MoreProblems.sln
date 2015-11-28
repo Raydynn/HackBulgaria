@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.GrayscaleImage", "01.GrayscaleImage\01.GrayscaleImage.csproj", "{5900A89C-5DC3-412D-8890-36AF9E7FBBC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.BlurImage", "03.BlurImage\03.BlurImage.csproj", "{49E39967-946F-4EBE-B7F3-68819B449FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.InterpolateImage", "02.InterpolateImage\02.InterpolateImage.csproj", "{18748CAD-178A-4BC5-9981-86E638EC7E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.MaxSpan", "05.MaxSpan\05.MaxSpan.csproj", "{AA1BC5F5-8C0D-4050-B69F-CC2AF1146D63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5900A89C-5DC3-412D-8890-36AF9E7FBBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5900A89C-5DC3-412D-8890-36AF9E7FBBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5900A89C-5DC3-412D-8890-36AF9E7FBBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5900A89C-5DC3-412D-8890-36AF9E7FBBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E39967-946F-4EBE-B7F3-68819B449FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E39967-946F-4EBE-B7F3-68819B449FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E39967-946F-4EBE-B7F3-68819B449FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E39967-946F-4EBE-B7F3-68819B449FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18748CAD-178A-4BC5-9981-86E638EC7E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18748CAD-178A-4BC5-9981-86E638EC7E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18748CAD-178A-4BC5-9981-86E638EC7E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18748CAD-178A-4BC5-9981-86E638EC7E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1BC5F5-8C0D-4050-B69F-CC2AF1146D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1BC5F5-8C0D-4050-B69F-CC2AF1146D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1BC5F5-8C0D-4050-B69F-CC2AF1146D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1BC5F5-8C0D-4050-B69F-CC2AF1146D63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
