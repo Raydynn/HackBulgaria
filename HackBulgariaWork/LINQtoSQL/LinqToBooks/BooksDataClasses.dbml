@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Entities" Class="BooksDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Entities;Integrated Security=True" SettingsObjectName="LinqToBooks.Properties.Settings" SettingsPropertyName="EntitiesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Author" Member="Authors">
+    <Type Name="Author">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="YearBorn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearDied" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Author_BooksWritten" Member="BooksWrittens" ThisKey="ID" OtherKey="AuthorID" Type="BooksWritten" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="User_BooksLoaned" Member="BooksLoaneds" ThisKey="ID" OtherKey="UserID" Type="BooksLoaned" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Book" Member="Books">
+    <Type Name="Book">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DatePublished" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Publisher" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Genre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ISBN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Book_BooksLoaned" Member="BooksLoaneds" ThisKey="ID" OtherKey="BookID" Type="BooksLoaned" />
+      <Association Name="Book_BooksWritten" Member="BooksWrittens" ThisKey="ID" OtherKey="BookID" Type="BooksWritten" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BooksLoaned" Member="BooksLoaneds">
+    <Type Name="BooksLoaned">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BookID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Book_BooksLoaned" Member="Book" ThisKey="BookID" OtherKey="ID" Type="Book" IsForeignKey="true" />
+      <Association Name="User_BooksLoaned" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BooksWritten" Member="BooksWrittens">
+    <Type Name="BooksWritten">
+      <Column Name="AuthorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BookID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Author_BooksWritten" Member="Author" ThisKey="AuthorID" OtherKey="ID" Type="Author" IsForeignKey="true" />
+      <Association Name="Book_BooksWritten" Member="Book" ThisKey="BookID" OtherKey="ID" Type="Book" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
